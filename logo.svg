@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="36px" viewBox="0 0 168 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-128.000000, -25.000000)">
+            <g id="logo" transform="translate(130.000000, 27.658717)">
+                <path d="M36,5.51672149 C38.209139,5.51672149 40,7.3232918 40,9.55180921 L40,21.6570724 C40,23.8855898 38.209139,25.6921601 36,25.6921601 L16.00625,25.6921601" id="Path" stroke="#2C3540" stroke-width="4.00000006" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4,25.6921601 C1.790861,25.6921601 1.0658141e-14,23.8855898 1.0658141e-14,21.6570724 L1.0658141e-14,9.55180921 C1.0658141e-14,7.3232918 1.790861,5.51672149 4,5.51672149 L24.021875,5.51672149" id="Path" stroke="#2C3540" stroke-width="4.00000006" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Path-2" stroke="#2C3540" stroke-width="4.00000006" stroke-linecap="round" stroke-linejoin="round" transform="translate(25.633594, 5.710595) scale(-1, 1) translate(-25.633594, -5.710595) " points="28.4640625 2.66453526e-15 22.803125 5.71059485 28.4640625 11.4211897"></polyline>
+                <polyline id="Path-2" stroke="#2C3540" stroke-width="4.00000006" stroke-linecap="round" stroke-linejoin="round" points="17.2640625 19.7719298 11.603125 25.4825247 17.2640625 31.1931195"></polyline>
+                <text id="REYOO" font-family="GothamRounded-Bold, Gotham Rounded" font-size="24" font-weight="bold" letter-spacing="5.453023" fill="#2C3540">
+                    <tspan x="55" y="25.3412829">REYOO</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
