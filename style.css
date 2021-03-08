@@ -1,0 +1,48 @@
+*    {margin: 0px; padding: 0px; text-decoration: none; cursor: none;}
+body {background:#151965; color: #fff; font-family: 'Roboto', sans-serif;}
+
+.float-left     {float: left;}
+.float-right    {float: right;}
+.clr            {clear: both;}
+.container      {width: 1215px; margin: 0 auto;}
+
+#typed          {color:#515585; font-size: 172px;}
+
+.typed-cursor   {color:#515585; font-size: 172px; font-weight: 100;}
+.about_txt      {width: 780px; margin-top: 180px;}
+.flipper        {}
+.liner          {font-size: 42px; font-weight: 100; margin-top: -80px;}
+
+.nav            {position: fixed; bottom: 0; background: #151965; width: 100%; padding:30px 0 160px 0; box-shadow: 0px -20px 20px #151965;}
+ul.nav          {margin-top:180px;}
+ul.nav li       {list-style: none; list-style-type: none; float: left; margin-right: 60px;}
+ul.nav li a     {display: block; text-decoration-style: none; color: #515585; font-size: 32px; transition: color 0.3s;
+                 transition: border 0.3s; transition: padding 0.3s;}
+ul li a:hover   {color:#46B5D1; border-bottom: 2px solid #46B5D1; padding-bottom: 4px;}
+ul li a.active  {color:#46B5D1; border-bottom: 2px solid #46B5D1; padding-bottom: 4px;}
+
+.box            {float: right;; width: 300px; height: 300px; border-radius: 4px; border: 1px solid #fff;
+                 position: absolute; top: 220px; right: 260px; transition: width 0.3s;}
+.box:hover      {width: 330px;}
+
+/*-----WORK-----*/
+
+ul.project              {margin-top:120px;}
+ul.project li           {border:solid 1px #32407B; color: rebeccapurple; width: 1215px; margin-top: -1px; display: block;}
+ul.project li:last-child{margin-bottom: 300px;}
+
+
+.ptitle                {float: left; width: 420px; padding: 80px 0px 80px 100px;}
+.ptitle h4             {font-size: 17px; color: #515585; font-weight: 400;}
+.ptitle p              {font-size: 36px; color: #ffff; display: inline;}
+
+.pbrief                {font-weight: 100; color: #fff; font-size: 26px; padding: 80px 0 80px 0; width: 450px; float: left;}
+.pbrief a              {font-size: 18px; color: #46B5D1; margin-top: 40px; font-weight: 300; display: block; transition: color 0.3s;}
+.pbrief a:hover        {border: none; padding: 0; color: #9AEBFF;}
+
+/*-----CONTACT-----*/
+
+.contact                {margin-top: 280px;font-weight: 300; font-size: 72px; color: #515585;}
+.contact a              {font-size: 42px; font-weight: 100; color: #fff; display: block; margin-top: 30px;}
+
+/*-----MOBILE-----*/
