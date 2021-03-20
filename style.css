@@ -22,7 +22,8 @@ ul li a:hover   {color:#46B5D1; border-bottom: 2px solid #46B5D1; padding-bottom
 ul li a.active  {color:#46B5D1; border-bottom: 2px solid #46B5D1; padding-bottom: 4px;}
 
 .box            {float: right; width: 300px; height: 300px; border-radius: 4px;
-                 position: absolute; top: 220px; right: 220px; transition: width 0.3s;}
+                 position: absolute; top: 220px; right: 220px; transition: width 0.3s; z-index: -99999;}
+.mobile         {display: none;}
 
 /*-----Paralax-----*/
 .text h1        {display: flex; align-items: center; justify-content: center; padding: 20px;
@@ -51,3 +52,10 @@ ul.project li:last-child{margin-bottom: 300px;}
 .social a               {margin-right:16px;}
 
 /*-----MOBILE-----*/
+@media only screen and (max-width: 768px) {
+    /*CSS code for devices with a maximal width of 768px */
+    .container              {display: none;}
+    .mobile                 {display: block; margin:200px 0 0 30px;}
+    h3                      {font-weight: 300; font-size: 42px; color: #515585;}
+    h4                      {font-size: 24px; font-weight: 100; color: #fff; margin: 20px 0 30px 0;}
+    }
