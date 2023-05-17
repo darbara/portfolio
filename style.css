@@ -10,7 +10,6 @@ body {background:#151965; color: #fff; font-family: 'Roboto', sans-serif;}
 
 .typed-cursor   {color:#515585; font-size: 172px; font-weight: 100;}
 .about_txt      {width: 780px; margin-top: 240px;}
-.flipper        {}
 .liner          {font-size: 42px; font-weight: 100; margin-top: -80px;}
 
 .nav            {position: fixed; bottom: 0; background: #151965; width: 100%; padding:30px 0 160px 0; box-shadow: 0px -20px 20px #151965;}
@@ -52,10 +51,10 @@ ul.project li:last-child{margin-bottom: 300px;}
 .social a               {margin-right:16px;}
 
 /*-----MOBILE-----*/
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) { */
     /*CSS code for devices with a maximal width of 768px */
-    .container              {display: none;}
+    /* .container              {display: none;}
     .mobile                 {display: block; margin:200px 0 0 30px;}
     h3                      {font-weight: 300; font-size: 42px; color: #515585;}
     h4                      {font-size: 24px; font-weight: 100; color: #fff; margin: 20px 0 30px 0;}
-    }
+    } */
