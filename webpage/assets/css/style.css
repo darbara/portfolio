@@ -12,10 +12,13 @@
     box-sizing: border-box;
 }
 
+html    {scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+  font-family: "Inter", serif;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 /* Header & Navigation */
@@ -185,6 +188,7 @@ body {
     border-radius: 60px;
     text-decoration: none;
     transition: background-color 0.3s;
+    border: 1px solid var(--white);
 }
 
 .cta-button:hover {
@@ -350,6 +354,11 @@ body {
 .event-details h3 {
     margin-bottom: 1rem;
     color: var(--primary-color);
+    text-align: left;
+}
+
+.event-details p {
+    text-align: left;
 }
 
 .event-time, .event-location {
