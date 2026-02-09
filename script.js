@@ -392,13 +392,6 @@ function closePdfModal() {
 }
 
 if (pdfModal && pdfModalClose && pdfModalTitle && pdfFrame) {
-    if (resumeLink) {
-        resumeLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            openPdfModal('Resume');
-        });
-    }
-
     pdfModalClose.addEventListener('click', closePdfModal);
 
     pdfModal.addEventListener('click', (e) => {
@@ -439,13 +432,16 @@ if (viewCaseStudies) {
 const workCtaButtons = document.querySelectorAll('.work-cta');
 workCtaButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
+        // If this CTA is a normal link (recommended), allow default behavior.
+        if (button.tagName === 'A') return;
+
         e.stopPropagation();
         if (!pdfModal || !pdfModalTitle || !pdfFrame) return;
         const caseStudy = button.getAttribute('data-case-study');
-        const title = caseStudy === 'mobile-growth' ? 
-            'Mobile Growth Case Study' : 
+        const title = caseStudy === 'mobile-growth' ?
+            'Mobile Growth Case Study' :
             'Design for High-Intent Actions Case Study';
-        
+
         openPdfModal(title);
     });
 });

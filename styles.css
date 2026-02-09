@@ -663,6 +663,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
     font-family: inherit;
     font-size: 1rem;
+    text-decoration: none;
     opacity: 1;
     transform: translateY(0);
     display: block;
@@ -676,6 +677,13 @@ h1, h2, h3, h4, h5, h6 {
 .work-cta:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.work-cta:focus,
+.work-cta:active,
+.work-cta:visited {
+    text-decoration: none;
 }
 
 /* Floating Resume CTA */
