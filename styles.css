@@ -1105,7 +1105,8 @@ h1, h2, h3, h4, h5, h6 {
     .hero-text {
         justify-self: end;
         max-width: 520px;
-        margin-top: 2rem;
+        top: 18%;
+    position: relative;
     }
     
     .work-container {
