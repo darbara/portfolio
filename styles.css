@@ -1106,7 +1106,8 @@ h1, h2, h3, h4, h5, h6 {
         justify-self: end;
         max-width: 520px;
         top: 18%;
-    position: relative;
+        position: relative;
+        padding: 0;
     }
     
     .work-container {
