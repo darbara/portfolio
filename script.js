@@ -537,4 +537,36 @@ function fixViewport() {
 }
 
 fixViewport();
-window.addEventListener('resize', fixViewport);
+
+// Magnetic Interaction for AI CTA
+document.addEventListener('DOMContentLoaded', () => {
+    const aiCta = document.querySelector('.hero-ai-cta');
+    if (!aiCta) return;
+
+    const isMobile = window.matchMedia('(pointer: coarse)').matches;
+    if (isMobile) return;
+
+    aiCta.addEventListener('mousemove', (e) => {
+        const rect = aiCta.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        // Pull strength Factor
+        const strength = 0.3;
+        
+        aiCta.style.transform = `translate(${x * strength}px, ${y * strength}px) scale(1.05)`;
+        
+        const glow = aiCta.querySelector('.ai-glow');
+        if (glow) {
+            glow.style.transform = `translate(calc(-50% + ${x * 0.1}px), calc(-50% + ${y * 0.1}px))`;
+        }
+    });
+
+    aiCta.addEventListener('mouseleave', () => {
+        aiCta.style.transform = 'translate(0, 0) scale(1)';
+        const glow = aiCta.querySelector('.ai-glow');
+        if (glow) {
+            glow.style.transform = 'translate(-50%, -50%)';
+        }
+    });
+});

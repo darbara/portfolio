@@ -7,7 +7,9 @@
 
 :root {
     --bg-primary: #0a0a0a;
+    --bg-primary-rgb: 10, 10, 10;
     --bg-secondary: #1a1a1a;
+    --bg-secondary-rgb: 26, 26, 26;
     --bg-tertiary: #2a2a2a;
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
@@ -21,7 +23,9 @@
 
 [data-theme="light"] {
     --bg-primary: #ffffff;
+    --bg-primary-rgb: 255, 255, 255;
     --bg-secondary: #f8f8f8;
+    --bg-secondary-rgb: 248, 248, 248;
     --bg-tertiary: #f0f0f0;
     --text-primary: #0a0a0a;
     --text-secondary: #666666;
@@ -447,23 +451,148 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.8s forwards;
+}
+
 .hero-cta {
     background: var(--text-primary);
     color: var(--bg-primary);
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    font-weight: 500;
+    padding: 0.85rem 1.75rem;
+    border-radius: 100px;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
     font-family: inherit;
-    font-size: 1.1rem;
-    margin-top: 1rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 .hero-cta:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-ai-cta {
+    position: relative;
+    padding: 0.85rem 1.75rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #fff;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.ai-icon-svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
+    animation: sparkleTwinkle 2s ease-in-out infinite;
+}
+
+/* Shifting Mesh Gradient Background */
+.hero-ai-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, 
+        #6366f1 0%, 
+        #a855f7 25%, 
+        #22d3ee 50%, 
+        #4f46e5 75%, 
+        #6366f1 100%
+    );
+    background-size: 50% 50%;
+    opacity: 0.4;
+    z-index: -1;
+    animation: meshRotate 8s linear infinite;
+    filter: blur(30px);
+    transition: opacity 0.4s ease;
+}
+
+@keyframes meshRotate {
+    0% { transform: rotate(0deg) scale(1.2); }
+    50% { transform: rotate(180deg) scale(1.5); }
+    100% { transform: rotate(360deg) scale(1.2); }
+}
+
+.hero-ai-cta:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
+}
+
+.hero-ai-cta:hover::before {
+    opacity: 0.8;
+    animation-duration: 4s; /* Speed up on hover */
+}
+
+.ai-sparkle {
+    font-size: 1.2rem;
+    animation: sparkleTwinkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkleTwinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.2) rotate(15deg); opacity: 0.8; }
+}
+
+.ai-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140%;
+    height: 140%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.hero-ai-cta:hover .ai-glow {
+    opacity: 1;
+}
+
+/* Light Theme Overrides for AI CTA */
+[data-theme="light"] .hero-ai-cta {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+[data-theme="light"] .hero-ai-cta:hover {
+    color: #000;
+}
+
+[data-theme="light"] .hero-ai-cta::before {
+    opacity: 0.2;
 }
 
 /* Work Section - Integrated Biosciences Style */
@@ -1198,5 +1327,21 @@ h1, h2, h3, h4, h5, h6 {
 
     .modal-body {
         padding: 1.5rem;
+    }
+
+    /* Mobile CTA Optimization */
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-cta, .hero-ai-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+        white-space: nowrap;
     }
 }

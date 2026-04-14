@@ -1,250 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darbara Singh - Product Designer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Darbara Singh — Product Designer</title>
+    <meta name="description"
+        content="Berlin-based Senior Product Designer with 8+ years designing B2B SaaS products, marketplaces, and AI-enabled experiences.">
+    <link rel="stylesheet" href="home-v2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <div class="cursor"></div>
-    
-    <!-- Floating Navigation -->
-    <nav class="floating-nav" id="floatingNav">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-text">DS</span>
-            </div>
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#about" class="nav-link" id="aboutLink">About</a>
-                <a href="img/CV-DarbaraSingh.pdf" class="nav-link" id="resumeLink" target="_blank" rel="noopener noreferrer">Resume</a>
-            </div>
-            <button class="theme-toggle" id="themeToggle">
-                <span class="theme-icon">◐</span>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+
+    <!-- Custom Cursor -->
+    <div class="v2-cursor" id="v2Cursor"></div>
+
+    <!-- ─── Navigation ─── -->
+    <nav class="v2-nav" id="v2Nav">
+        <a href="#" class="v2-brand">DS</a>
+        <ul class="v2-nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="img/CV-DarbaraSingh.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+        <button class="v2-theme-btn" id="v2ThemeBtn" aria-label="Toggle theme">◐</button>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg">
-            <div class="background-gradient-animation"></div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-photo" data-parallax="0.5">
-                    <div class="photo-frame">
-                        <img src="img/my-pic.png" alt="Darbara Singh" class="profile-img">
-                    </div>
-                </div>
-                <div class="hero-text" data-parallax="0.3">
-                    <h1 class="hero-title">
-                        <span class="title-line typing-text">Darbara Singh,</span>
-                        <span class="title-line typing-text">Product Designer</span>
-                    </h1>
-                    <p class="hero-subtitle">Berlin-based • 8+ years experience</p>
-                    <p class="hero-description">
-                        Building data-driven, intuitive, and accessible products. Leading 0-to-1 initiatives through product discovery and tight collaboration with product and engineering, including AI-enabled design workflows.
-                    </p>
-                    <p class="hero-projects">
-                        I create B2B SaaS products at scale including <a href="https://www.wlw.de/" target="_blank" rel="noopener noreferrer" class="hero-link">wlw.de</a>, <a href="https://apps.apple.com/de/app/europages-b2b-marktplatz-app/id6459474480" target="_blank" rel="noopener noreferrer" class="hero-link">europages app</a> and 
-                    <a href="https://www.storehub.com/" target="_blank" rel="noopener noreferrer" class="hero-link">storehub</a> point of sales. <a href="https://www.behance.net/gallery/80501287/Berlin-Creative-Jam-2019" target="_blank" rel="noopener noreferrer" class="hero-link">Adobe Creative Jam</a> award winner.
-                    </p>
-                    <button class="hero-cta" id="viewCaseStudies">View Case Studies</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ─── Hero ─── -->
+    <section class="v2-hero" id="home">
+        <!-- Background Orbs -->
+        <div class="v2-orb v2-orb-1" aria-hidden="true"></div>
+        <div class="v2-orb v2-orb-2" aria-hidden="true"></div>
+        <div class="v2-orb v2-orb-3" aria-hidden="true"></div>
 
-    <!-- Work Section - Integrated Biosciences Style -->
-    <section id="work" class="work">
-        <div class="work-container">
-            <div class="work-sidebar">
-                <div class="work-label">
-                    <span class="work-label-text">SELECTED WORK</span>
-                    <div class="work-label-indicator"></div>
-                </div>
-                <div class="work-pagination">
-                    <span class="work-current">01</span>
-                    <span class="work-divider">/</span>
-                    <span class="work-total">04</span>
-                </div>
+        <div class="v2-hero-inner">
+            <!-- Status Tag -->
+            <div class="v2-status-tag">
+                <div class="v2-status-dot"></div>
+                Available for new opportunities · Berlin, DE
             </div>
-            <div class="work-main">
-                <div class="work-item active" data-work="mobile-growth">
-                    <div class="work-content">
-                        <div class="work-number">01</div>
-                        <div class="work-text">
-                            <h3 class="work-title">App Growth Built On Meaningful Engagement</h3>
-                            <p class="work-description">
-                                +22% increase in 30-day mobile retention through faster, more reliable task execution.
-                            </p>
-                            <div class="work-tags">
-                                <span class="tag">Mobile Design</span>
-                                <span class="tag">B2B</span>
-                                <span class="tag">Growth</span>
-                                <span class="tag">SaaS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work-visual">
-                        <div class="work-image-container">
-                            <img src="img/case01.png" alt="Mobile Growth Project">
-                            <div class="work-overlay">
-                                <a class="work-cta always-visible" data-case-study="mobile-growth" href="img/case01.pdf" target="_blank" rel="noopener noreferrer">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item" data-work="high-intent">
-                    <div class="work-content">
-                        <div class="work-number">02</div>
-                        <div class="work-text">
-                            <h3 class="work-title">Scaling Merchant Growth from 3K to 13K+</h3>
-                            <p class="work-subtitle">Drove UX & system design that increased monthly transaction volume by +10–18K RM (ringgit)</p>
-                            <div class="work-tags">
-                                <span class="tag">Point of Sale</span>
-                                <span class="tag">Ecommerce</span>
-                                <span class="tag">Product discovery</span> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work-visual">
-                        <div class="work-image-container">
-                            <img src="img/case02.png" alt="Design for High-Intent Actions">
-                            <div class="work-overlay">
-                                <a class="work-cta always-visible" data-case-study="high-intent" href="img/case02.pdf" target="_blank" rel="noopener noreferrer">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-item" data-work="high-intent">
-                    <div class="work-content">
-                        <div class="work-number">03</div>
-                        <div class="work-text">
-                            <h3 class="work-title">Designing for High-Intent Actions</h3>
-                            <p class="work-subtitle">~15% lift in CTR and a 35% increase in supplier response rate. A Growth Redesign of the B2B Request for Quotes funnel.</p>
-                            <div class="work-tags">
-                                <span class="tag">UX Design</span>
-                                <span class="tag">Conversion</span>
-                                <span class="tag">B2B</span>
-                                <span class="tag">SaaS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work-visual">
-                        <div class="work-image-container">
-                            <img src="img/case03.png" alt="Design for High-Intent Actions">
-                            <div class="work-overlay">
-                                <a class="work-cta always-visible" data-case-study="high-intent" href="img/Case03.pdf" target="_blank" rel="noopener noreferrer">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="work-item" data-work="high-intent">
-                    <div class="work-content">
-                        <div class="work-number">04</div>
-                        <div class="work-text">
-                            <h3 class="work-title">MindWay - Proof of Concept</h3>
-                            <p class="work-subtitle">The solution helps identify early signs of depression and empowers users with timely, data-driven awareness of their emotional well-being.</p>
-                            <div class="work-tags">
-                                <span class="tag">HealthTech</span>
-                                <span class="tag">Ai & ML</span>
-                                <span class="tag">UX Design</span> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work-visual">
-                        <div class="work-image-container">
-                            <img src="img/case04.png" alt="Design for High-Intent Actions">
-                            <div class="work-overlay">
-                                <a class="work-cta always-visible" data-case-study="high-intent" href="img/case04.pdf" target="_blank" rel="noopener noreferrer">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Modal -->
-    <div class="about-modal-overlay" id="aboutModal">
-        <div class="about-modal-container">
-            <div class="about-modal-header">
-                <h2 class="about-modal-title">About me</h2>
-                <button class="about-modal-close" id="aboutModalClose">
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="about-modal-content">
-                <div class="about-section">
-                    <h3>Product Designer & Creative Technologist</h3>
-                    <p>
-                        Berlin-based Senior Product Designer with 8+ years of experience designing data-driven, intuitive, and accessible digital products across marketplaces, SaaS platforms, and operational tools. Experienced in leading 0→1 and growth initiatives, partnering closely with product and engineering through discovery, delivery, and iteration.
-Strong focus on experimentation, and AI-enabled design and prototyping workflows.
-                    </p>
-                </div>
-                <div class="about-section">
-                    <h3>Expertise</h3>
-                    <p>
-I work at the intersection of user needs, business goals, and technical constraints, translating ambiguity into clear product direction. My practice balances craft with outcomes designing experiences that are usable, resilient, and measurable at scale.                    </p>
-                    <div class="about-skills">
-                        <div class="skill-item">Product Strategy</div>
-                        <div class="skill-item">UX/UI Design</div>
-                        <div class="skill-item">Design Systems</div>
-                        <div class="skill-item">Prototyping</div>
-                        <div class="skill-item">User Research</div>
-                        <div class="skill-item">AI-Enabled Workflows</div>
-                    </div>
-                </div>
-                <div class="about-section">
-                    <h3>Achievements</h3>
-                    <p>
-                        Led cross-functional design initiatives that delivered measurable business impact, including improvements in user engagement, conversion, and operational efficiency across multiple digital products and platforms.
-                    </p>
-                </div>
-                <!-- <div class="about-modal-footer">
-                    <button class="resume-download-btn" id="downloadResumeBtn">
-                        <span>Download Resume</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
+            <!-- Title -->
+            <h1 class="v2-hero-title" id="heroTitle">
+                <span class="line"><span class="line-inner">Darbara Singh,</span></span>
+                <span class="line"><span class="line-inner v2-dimmed">Product Designer.</span></span>
+            </h1>
+
+            <!-- Description + CTAs -->
+            <div class="v2-hero-bottom">
+                <p class="v2-hero-desc">
+                    Building <strong>data-driven, intuitive products</strong> for 8+ years.
+                    Leading 0→1 initiatives across B2B SaaS, marketplaces, and AI-enabled workflows
+                    at companies like <a href="https://www.wlw.de/" target="_blank" rel="noopener" class="highlight">wlw.de</a>,
+                    <a href="https://apps.apple.com/de/app/europages-b2b-marktplatz-app/id6459474480" target="_blank" rel="noopener" class="highlight">Europages</a>
+                    and <a href="https://www.storehub.com/" target="_blank" rel="noopener" class="highlight">StoreHub</a>.
+                </p>
+                <div class="v2-hero-links">
+                    <a href="#work" class="v2-cta-primary">View Work ↓</a>
+                    <a href="https://designer-ships.vercel.app/" class="v2-cta-ai" target="_blank" rel="noopener">
+                        <svg class="v2-ai-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <path d="M14.217,19.707l-1.112,2.547c-0.427,0.979-1.782,0.979-2.21,0l-1.112-2.547c-0.99-2.267-2.771-4.071-4.993-5.057L1.73,13.292c-0.973-0.432-0.973-1.848,0-2.28l2.965-1.316C6.974,8.684,8.787,6.813,9.76,4.47l1.126-2.714c0.418-1.007,1.81-1.007,2.228,0L14.24,4.47c0.973,2.344,2.786,4.215,5.065,5.226l2.965,1.316c0.973,0.432,0.973,1.848,0,2.28l-3.061,1.359C16.988,15.637,15.206,17.441,14.217,19.707z"/>
+                            <path d="M24.481,27.796l-0.339,0.777c-0.248,0.569-1.036,0.569-1.284,0l-0.339-0.777c-0.604-1.385-1.693-2.488-3.051-3.092l-1.044-0.464c-0.565-0.251-0.565-1.072,0-1.323l0.986-0.438c1.393-0.619,2.501-1.763,3.095-3.195l0.348-0.84c0.243-0.585,1.052-0.585,1.294,0l0.348,0.84c0.594,1.432,1.702,2.576,3.095,3.195l0.986,0.438c0.565,0.251,0.565,1.072,0,1.323l-1.044,0.464C26.174,25.308,25.085,26.411,24.481,27.796z"/>
                         </svg>
-                    </button>
-                </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="pdf-modal-overlay" id="pdfModal">
-        <div class="pdf-modal-container">
-            <div class="pdf-modal-header">
-                <h2 class="pdf-modal-title" id="pdfModalTitle">Document</h2>
-                <button class="pdf-modal-close" id="pdfModalClose">
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="pdf-modal-content">
-                <div class="pdf-viewer">
-                    <iframe id="pdfFrame" src="" width="100%" height="100%"></iframe>
+                        AI Experiments
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <!-- Photo Tooltip (follows cursor on title hover) -->
+        <div class="v2-photo-tooltip" id="photoTooltip">
+            <!-- Revolving text ring -->
+            <svg class="v2-revolve-text" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <path id="circlePath" d="M130,130 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0" fill="none"/>
+                </defs>
+                <text>
+                    <textPath href="#circlePath" startOffset="0%">BUILDER · CREATOR · DEPLOYER · BUILDER · CREATOR · DEPLOYER ·</textPath>
+                </text>
+            </svg>
+            <div class="v2-photo-tooltip-inner">
+                <img src="img/my-pic.webp" alt="Darbara Singh">
+                <!-- Film grain overlay -->
+                <div class="v2-film-grain"></div>
+                <!-- Scanline overlay -->
+                <div class="v2-scanlines"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="v2-scroll-wrapper">
+            <a href="#work" class="v2-scroll-indicator" aria-label="Scroll to work">
+                <span class="v2-scroll-text">Scroll</span>
+                <div class="v2-scroll-icon">
+                    <div class="v2-scroll-dot"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ─── Work ─── -->
+    <section class="v2-work" id="work">
+        <div class="v2-work-header">
+            <span class="v2-section-label">Selected Work</span>
+            <span class="v2-work-count">04 Projects</span>
+        </div>
+
+        <!-- Case 01 -->
+        <article class="v2-work-item" id="proj-01">
+            <div class="v2-work-info">
+                <div class="v2-work-num">01 — Mobile · B2B · Growth</div>
+                <h2 class="v2-work-title">App Growth Built On Meaningful Engagement</h2>
+                <p class="v2-work-desc">+22% increase in 30-day mobile retention through faster, more reliable task
+                    execution for B2B marketplace users.</p>
+                <div class="v2-work-tags">
+                    <span class="v2-tag">Mobile Design</span>
+                    <span class="v2-tag">B2B SaaS</span>
+                    <span class="v2-tag">Growth</span>
+                    <span class="v2-tag">Europages</span>
+                </div>
+                <a href="case01.html" class="v2-work-cta">
+                    View Case Study
+                    <span class="cta-arrow">↗</span>
+                </a>
+            </div>
+            <div class="v2-work-visual">
+                <img src="img/case01.png" alt="Mobile Marketplace Case Study" loading="lazy">
+            </div>
+        </article>
+
+        <!-- Case 02 -->
+        <article class="v2-work-item" id="proj-02">
+            <div class="v2-work-info">
+                <div class="v2-work-num">02 — POS · Ecommerce · Scale</div>
+                <h2 class="v2-work-title">Scaling Merchant Growth from 3K to 13K+</h2>
+                <p class="v2-work-desc">Drove UX & system design that increased monthly transaction volume by +10–18K RM
+                    across the StoreHub merchant network.</p>
+                <div class="v2-work-tags">
+                    <span class="v2-tag">Point of Sale</span>
+                    <span class="v2-tag">Ecommerce</span>
+                    <span class="v2-tag">Product Discovery</span>
+                    <span class="v2-tag">StoreHub</span>
+                </div>
+                <a href="case02.html" class="v2-work-cta">
+                    View Case Study
+                    <span class="cta-arrow">↗</span>
+                </a>
+            </div>
+            <div class="v2-work-visual">
+                <img src="img/case02.png" alt="Merchant Growth Case Study" loading="lazy">
+            </div>
+        </article>
+
+        <!-- Case 03 -->
+        <article class="v2-work-item" id="proj-03">
+            <div class="v2-work-info">
+                <div class="v2-work-num">03 — UX Design · Conversion · B2B</div>
+                <h2 class="v2-work-title">Designing for High-Intent Actions</h2>
+                <p class="v2-work-desc">~15% lift in CTR and a 35% increase in supplier response rate. A growth redesign
+                    of the B2B Request for Quotes funnel.</p>
+                <div class="v2-work-tags">
+                    <span class="v2-tag">UX Design</span>
+                    <span class="v2-tag">Conversion</span>
+                    <span class="v2-tag">B2B SaaS</span>
+                    <span class="v2-tag">wlw.de</span>
+                </div>
+                <a href="case03.html" class="v2-work-cta">
+                    View Case Study
+                    <span class="cta-arrow">↗</span>
+                </a>
+            </div>
+            <div class="v2-work-visual">
+                <img src="img/case03.png" alt="RFQ Funnel Case Study" loading="lazy">
+            </div>
+        </article>
+
+        <!-- Case 04 -->
+        <article class="v2-work-item" id="proj-04">
+            <div class="v2-work-info">
+                <div class="v2-work-num">04 — HealthTech · AI & ML</div>
+                <h2 class="v2-work-title">MindWay — AI-Powered Mental Health Awareness</h2>
+                <p class="v2-work-desc">A proof of concept using machine learning to identify early signs of depression
+                    — surfacing subtle shifts in emotional patterns without stigma.</p>
+                <div class="v2-work-tags">
+                    <span class="v2-tag">HealthTech</span>
+                    <span class="v2-tag">AI & ML</span>
+                    <span class="v2-tag">0→1 Design</span>
+                    <span class="v2-tag">POC</span>
+                </div>
+                <a href="case04.html" class="v2-work-cta">
+                    View Case Study
+                    <span class="cta-arrow">↗</span>
+                </a>
+            </div>
+            <div class="v2-work-visual">
+                <img src="img/case04.png" alt="MindWay Mental Health App" loading="lazy">
+            </div>
+        </article>
+    </section>
+
+    <!-- ─── About ─── -->
+    <section id="about" class="v2-about">
+        <div class="v2-about-grid">
+            <!-- Col 1: Bio -->
+            <div>
+                <p class="v2-about-label">About</p>
+                <p class="v2-about-bio">
+                    <strong>Senior Product Designer</strong> based in Berlin with 8+ years building user-centered
+                    products at scale.
+                    I work at the intersection of user needs, business goals, and technical constraints — translating
+                    ambiguity into
+                    clear product direction and measurable outcomes.
+                    <br><br>
+                    Won the <strong>Adobe Creative Jam 2019</strong> award. Strong focus on AI-enabled design workflows
+                    and prototyping.
+                </p>
+            </div>
+            <!-- Col 2: Skills -->
+            <div>
+                <p class="v2-about-label">Expertise</p>
+                <ul class="v2-skills-list">
+                    <li>Product Strategy & 0→1</li>
+                    <li>UX / UI Design</li>
+                    <li>Design Systems</li>
+                    <li>User Research & Discovery</li>
+                    <li>Prototyping & Interaction Design</li>
+                    <li>AI-Enabled Design Workflows</li>
+                    <li>Growth & Conversion Optimisation</li>
+                </ul>
+            </div>
+            <!-- Col 3: Contact -->
+            <div>
+                <p class="v2-about-label">Get in Touch</p>
+                <div class="v2-contact-links">
+                    <a href="mailto:darbara.singh@example.com" class="v2-contact-link">Email ↗</a>
+                    <a href="img/CV-DarbaraSingh.pdf" target="_blank" rel="noopener" class="v2-contact-link">Resume / CV
+                        ↗</a>
+                    <a href="https://www.linkedin.com/in/darbarasingh/" target="_blank" rel="noopener"
+                        class="v2-contact-link">LinkedIn ↗</a>
+                    <a href="https://www.behance.net/darbarasingh" target="_blank" rel="noopener"
+                        class="v2-contact-link">Behance ↗</a>
+                    <a href="https://designer-ships.vercel.app/" target="_blank" rel="noopener"
+                        class="v2-contact-link">AI Experiments ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer class="v2-footer">
+        <span class="v2-footer-copy">© 2025 Darbara Singh. All rights reserved.</span>
+        <span class="v2-footer-copy">Berlin, DE · Product Designer</span>
+    </footer>
+
+    <script>
+        // ── Theme Toggle ──
+        const html = document.documentElement;
+        const themeBtn = document.getElementById('v2ThemeBtn');
+
+        const savedTheme = localStorage.getItem('v2-theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtn.textContent = savedTheme === 'dark' ? '◐' : '◑';
+
+        themeBtn.addEventListener('click', () => {
+            const curr = html.getAttribute('data-theme');
+            const next = curr === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('v2-theme', next);
+            themeBtn.textContent = next === 'dark' ? '◐' : '◑';
+        });
+
+        // ── Scroll Nav ──
+        const nav = document.getElementById('v2Nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ── Custom Cursor ──
+        const cursor = document.getElementById('v2Cursor');
+        const isCoarse = window.matchMedia('(pointer: coarse)').matches;
+
+        if (!isCoarse) {
+            document.addEventListener('mousemove', e => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            const hoverTargets = document.querySelectorAll('a, button, .v2-work-item');
+            hoverTargets.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        // ── Photo Tooltip on Title Hover ──
+        const heroTitle = document.getElementById('heroTitle');
+        const photoTooltip = document.getElementById('photoTooltip');
+
+        if (heroTitle && photoTooltip && !isCoarse) {
+            let tooltipX = 0, tooltipY = 0;
+            let currentX = 0, currentY = 0;
+            let tooltipRAF = null;
+
+            // Smooth lerp follow
+            function updateTooltipPos() {
+                currentX += (tooltipX - currentX) * 0.15;
+                currentY += (tooltipY - currentY) * 0.15;
+                photoTooltip.style.left = currentX + 'px';
+                photoTooltip.style.top = currentY + 'px';
+                tooltipRAF = requestAnimationFrame(updateTooltipPos);
+            }
+
+            heroTitle.addEventListener('mouseenter', () => {
+                photoTooltip.classList.add('is-visible');
+                tooltipRAF = requestAnimationFrame(updateTooltipPos);
+            });
+
+            heroTitle.addEventListener('mouseleave', () => {
+                photoTooltip.classList.remove('is-visible');
+                if (tooltipRAF) cancelAnimationFrame(tooltipRAF);
+            });
+
+            heroTitle.addEventListener('mousemove', e => {
+                tooltipX = e.clientX;
+                tooltipY = e.clientY;
+            });
+        }
+
+        // ── Magnetic CTA ──
+        const magneticEls = document.querySelectorAll('.v2-cta-primary, .v2-cta-ai, .v2-work-cta');
+
+        if (!isCoarse) {
+            magneticEls.forEach(el => {
+                el.addEventListener('mousemove', e => {
+                    const rect = el.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    el.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+                });
+                el.addEventListener('mouseleave', () => {
+                    el.style.transform = '';
+                });
+            });
+        }
+
+        // ── Scroll Reveal ──
+        const workItems = document.querySelectorAll('.v2-work-item');
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed');
+                    }, 100);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        workItems.forEach(el => revealObserver.observe(el));
+
+        // ── Smooth Eased Scroll ──
+        function smoothScrollTo(target, duration = 900) {
+            const startY = window.scrollY;
+            const targetY = target.getBoundingClientRect().top + window.scrollY - 80; // 80px nav offset
+            const distance = targetY - startY;
+            let startTime = null;
+
+            const easeInOutCubic = t =>
+                t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+                if (progress < 1) requestAnimationFrame(step);
+            }
+
+            requestAnimationFrame(step);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const id = link.getAttribute('href');
+                if (id === '#') return;
+                const target = document.querySelector(id);
+                if (!target) return;
+                e.preventDefault();
+                smoothScrollTo(target);
+            });
+        });
+    </script>
 </body>
+
 </html>
